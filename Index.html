@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brand Carbon Insights</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8f5f4;
+      --text: #1c1c1c;
+      --highlight: #913c3a;
+      --secondary: #eee;
+      --rounded: 20px;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      padding: 2rem;
+      background: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: var(--shadow);
+    }
+
+    .brand-kits {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .kit {
+      background: var(--secondary);
+      border-radius: var(--rounded);
+      padding: 0.75rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .kit.active {
+      background: var(--highlight);
+      color: white;
+    }
+
+    .kit .icon {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1300px;
+      margin: auto;
+    }
+
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .filters button {
+      background: var(--highlight);
+      border: none;
+      padding: 0.5rem 1.25rem;
+      color: white;
+      border-radius: 999px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .filters button:hover {
+      background: #742e2d;
+    }
+
+    .key {
+      margin: 1rem 0 2rem;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    .graph,
+    .stats {
+      background: white;
+      border-radius: var(--rounded);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+      margin-bottom: 2rem;
+      transition: transform 0.3s;
+    }
+
+    .graph:hover,
+    .stats:hover {
+      transform: translateY(-5px);
+    }
+
+    .stats img,
+    .graph img {
+      width: 100%;
+      border-radius: var(--rounded);
+    }
+
+    .video-section {
+      margin-top: 4rem;
+    }
+
+    .video-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .video-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    video {
+      width: 100%;
+      border-radius: var(--rounded);
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+    }
+
+    video:hover {
+      transform: scale(1.03);
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: flex-start;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Brand Carbon Insights</h1>
+    <div class="brand-kits">
+      <div class="kit">
+        <div class="icon" style="background: #00c19f;"></div>
+        ECorp
+      </div>
+      <div class="kit">
+        <div class="icon" style="background: #fcbf49;"></div>
+        ICorp
+      </div>
+      <div class="kit active">
+        <div class="icon" style="background: #e63946;"></div>
+        The Agency
+      </div>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="filters">
+      <button>Refurbishment</button>
+      <button>New build</button>
+      <button>All</button>
+      <button>Complete</button>
+      <button style="background: #ccc; color: #000;">Estimate</button>
+    </div>
+
+    <div class="key">
+      <p><strong>Key:</strong> 500 kgCO₂e/m² - 2030 target | 600 kgCO₂e/m² - 2025 target</p>
+    </div>
+
+    <div class="graph">
+      <img src="graph.png" alt="Carbon Emission Graph">
+    </div>
+
+    <div class="stats">
+      <img src="stats.png" alt="Carbon and Energy Statistics">
+    </div>
+
+    <div class="video-section">
+      <h2>Interactive Features</h2>
+      <div class="video-wrapper">
+        <video autoplay muted loop src="loader.mp4"></video>
+        <video autoplay muted loop src="loader (1).mp4"></video>
+        <video autoplay muted loop src="homepage.mp4"></video>
+        <video autoplay muted loop src="customer-section.mp4"></video>
+        <video autoplay muted loop src="features-services.mp4"></video>
+        <video autoplay muted loop src="parallax animation.mp4"></video>
+        <video autoplay muted loop src="ripple effect.mp4"></video>
+        <video autoplay muted loop src="scroll and pop up.mp4"></video>
+        <video autoplay muted loop src="showcase work.mp4"></video>
+        <video autoplay muted loop src="striking - any simple object can be used.mp4"></video>
+        <video autoplay muted loop src="testimonials.mp4"></video>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
